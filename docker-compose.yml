@@ -1,0 +1,26 @@
+version: "3"
+
+
+services:
+  webtransport_server:
+    build: ./wtserver/.
+    container_name: webtransport_server
+    ports:
+      - "4433:4433"
+    networks:
+      - webtransport_network
+
+  webtransport_client:
+    build: ./wtclient/.
+    container_name: webtransport_client
+    environment:
+      SERVER_HOST: webtransport_server
+    depends_on:
+      - webtransport_server
+    networks:
+      - webtransport_network
+    restart: on-failure
+
+
+networks:
+  webtransport_network:
