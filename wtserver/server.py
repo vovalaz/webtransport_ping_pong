@@ -61,7 +61,7 @@ if __name__ == "__main__":
         is_client=False,
         max_datagram_frame_size=65536,
     )
-    configuration.load_cert_chain("ssl_cert.pem", "ssl_key.pem")
+    configuration.load_cert_chain("domain.crt", "domain.key")
 
     loop = asyncio.get_event_loop()
     loop.run_until_complete(

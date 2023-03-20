@@ -14,12 +14,11 @@ services:
     build: ./wtclient/.
     container_name: webtransport_client
     environment:
-      SERVER_HOST: webtransport_server
+      SERVER_HOST: localhost
     depends_on:
       - webtransport_server
     networks:
       - webtransport_network
-    restart: on-failure
 
 
 networks:

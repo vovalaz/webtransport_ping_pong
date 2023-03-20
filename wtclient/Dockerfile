@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 EXPOSE 4433
-CMD ["python", "-u", "client.py", "--ca-certs", "pycacert.pem", "--data", "PING", "https://0.0.0.0:4433"]
+CMD ["python", "-u", "client.py"]
