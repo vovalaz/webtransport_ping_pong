@@ -14,7 +14,7 @@ services:
     build: ./wtclient/.
     container_name: webtransport_client
     environment:
-      SERVER_HOST: localhost
+      SERVER_HOST: 127.0.0.1
     depends_on:
       - webtransport_server
     networks:

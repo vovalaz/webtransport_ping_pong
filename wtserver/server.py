@@ -54,7 +54,7 @@ class ServerProtocol(QuicConnectionProtocol):
 
 
 if __name__ == "__main__":
-    BIND_ADDRESS, BIND_PORT = "0.0.0.0", 4433
+    BIND_ADDRESS, BIND_PORT = "127.0.0.1", 4433
 
     configuration = QuicConfiguration(
         alpn_protocols=H3_ALPN,
